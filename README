@@ -1,0 +1,42 @@
++-------------------------------------------------------------+
+| unixODBC-Test                                               |
++-------------------------------------------------------------+
+
+README
+---------------------------------------------------------------
+
+Description:
+
+	unixODBC-Test is a compliment to unixODBC - providing
+	the Test bits. It is also used on MS platforms using
+        the MS ODBC implementation/SDK.
+	
+License:
+	
+	See the COPYING file.
+
+Parts:
+	unixODBC-Test includes the following;
+	
+	- AutoTest - collection of AutoTest libraries/plugins
+	- TestFarm - alternate test framework & additional tests
+
+How To Start:
+
+	Look for and read README files with extensions of interest. Then
+	read the INSTALL file.
+	
+	You can also jump into the doc directory and browse information 
+	there. And do not forget the online stuff.
+	
+	Some documentation may be a bit out of date the vast majority of
+	it should be ok.
+	
+Resources:
+
+        http://unixodbc-test.sourceforge.net
+        http://unixodbc-gui-qt.sourceforge.net
+        http://unixodbc.sourceforge.net
+	
+---------------------------------------------------------------
+ 

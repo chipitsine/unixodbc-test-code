@@ -1,0 +1,25 @@
++-------------------------------------------------------------+
+| unixODBC-Test                                               |
++-------------------------------------------------------------+
+
+COPYING
+---------------------------------------------------------------
+
+This project is governed by popular 'play-it-forward' licenses.
+The goal is for everything to be GPL (see GPL.txt) and this is 
+the case at the time of this writing. But other 
+'play-it-forward' licenses may be introduced over time. For
+example; BSD, LGPL, and public domain. Check the source files
+where more clarity is required.
+
+Folks (commercial organizations in particular) are encouraged
+to use these tests and to contribute additional tests to this
+project - even if the tests are vendor specific.
+
+---------------------------------------------------------------
+
+
+
+
+   
+   

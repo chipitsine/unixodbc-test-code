@@ -1,0 +1,8 @@
+dd.mm.yyyy
+
+1,0,00
+
+	* Made the unixODBC Test bits build in thier own project.
+
+
+

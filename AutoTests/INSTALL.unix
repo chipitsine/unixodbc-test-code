@@ -1,0 +1,77 @@
++-------------------------------------------------------------+
+| unixODBC-Test                                               |
+| AutoTests                                                   |
++-------------------------------------------------------------+
+
+INSTALL (UNIX)
+---------------------------------------------------------------
+
+Prerequisits
+------------
+
+    - C++ development environment
+    - Qt dev
+    - unixODBC-core (or equiv)
+    - unixODBC-dev (or equiv)
+    - unixODBC-GUI-Qt (or equiv)
+    - unixODBC-Test (source code)
+
+    NOTE: autotest.h can come from a variety of sources (but
+          they should have same content so any will do);
+
+	- unixODBC-Test sources
+	- unixODBC sources
+	- unixODBC-dev binaries
+
+Building
+--------
+ 
+Install and configure the gnu C++ development environment. Install 
+Qt (to get qmake if nothing else). Install unixODBC-core (or equiv) 
+to get the ODBC run-time environment (basically the Driver 
+Manager). Install unixODBC-dev (or equiv) to get the SDK (basically 
+some include files).
+
+At this point you must decide upon the GUI implementation. The GUI 
+comes into play in 2 specific ways. 
+
+1. The output functions (szLogPrintf, szMessageBox, etc). These are 
+   in a library called gtrtst. The tests use them and since our 
+   tests are plugins - we will need to link to a gtrtst to resolve
+   these calls. 
+
+2. A test application (to call/manage our tests). This is a GUI 
+   application but not implemented in unixODBC-Test. 
+
+So one can use the MS based gtrtst library and ODBC test application 
+or some other implementation. Here - we choose to use the Qt based
+implementation as found in unixODBC-GUI-Qt. The gtrtst is called
+gtrtstQ4 and the application is called ODBCTestQ4. See the 
+unixODBC-GUI-Qt project for more information.
+
+In anycase - the source code can be built using Qt's qmake. The 
+qmake program is part of the Qt development tool-set. The use of 
+qmake makes the build maintainence (and execution) simple and 
+consistent - on	ALL platforms. You really must look at the 
+AutoTests.pro file and the supporting *.pri files.
+
+        NOTE: Building using GNU autotools may also be supported 
+        in the future.
+
+A typical build is as follows;
+
+$ qmake
+$ make
+
+
+Installing
+----------
+
+There is no need to install anything. It is expected that the 
+files will be used in-place. Feel free to copy/move/link the 
+resulting binaries (for the purposes of executing the tests) as 
+you see fit.
+
+
+---------------------------------------------------------------
+

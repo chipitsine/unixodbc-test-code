@@ -1,0 +1,27 @@
++-------------------------------------------------------------+
+| AutoTests                                                   |
++-------------------------------------------------------------+
+
+README
+---------------------------------------------------------------
+
+An AutoTest is a library containing one or more Test Cases 
+implemented according to the ODBC Test specifications. The test 
+libraries are managed and the tests executed by a GUI. The 
+unixODBC-GUI-Qt project contains a program called ODBCTestQ4 for 
+this purpose. The odbctst32.exe may also be used on MS platforms.
+
+This directory contains collections of Auto Test libraries. The 
+Examples collection offers a good place to look for those 
+interested in how to write an Auto Test.
+
+Folks (commercial organizations in particular) are encouraged
+to contribute additional tests to this project - even if the 
+tests are vendor specific.
+
+---------------------------------------------------------------
+Peter Harvey <pharvey@codebydesign.com>
+2009.01.01
+
+
+

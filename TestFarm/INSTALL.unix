@@ -1,0 +1,37 @@
++-------------------------------------------------------------+
+| unixODBC-Test                                               |
+| TestFarm                                                    |
++-------------------------------------------------------------+
+
+INSTALL (UNIX)
+---------------------------------------------------------------
+
+Prerequisits
+
+    - C++ development environment
+    - Perl (TestFarm only)
+    - Perl Config::IniFiles from CPAN
+    - Qt dev (for qmake only)
+    - unixODBC-core (or equiv)
+    - unixODBC-dev (or equiv)
+    - unixODBC-Test (source code)
+
+Building
+ 
+The source code can be built using qmake. The qmake program is
+part of the Qt development tool-set. The use of qmake makes the
+build maintainence (and execution) simple and consistent - on 
+ALL platforms. 
+
+        NOTE: Building using GNU autotools may also be supported 
+              in the future.
+
+Installing
+
+There is no need to install anything. It is expected that the 
+files will be used in-place. Feel free to copy/move/link the 
+resulting binaries (for the purposes of executing the tests) as 
+you see fit.
+
+---------------------------------------------------------------
+

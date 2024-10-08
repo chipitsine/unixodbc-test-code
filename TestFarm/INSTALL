@@ -1,0 +1,25 @@
++-------------------------------------------------------------+
+| unixODBC-Test                                               |
+| TestFarm                                                    |
++-------------------------------------------------------------+
+
+INSTALL
+---------------------------------------------------------------
+
+Source Code
+-----------
+
+The typical way to get unixODBC-Test is in source form. This
+may be an archive (tar-ball or zip file) or from the source
+code repository on SourceForge.
+
+Platforms
+---------
+
+See the platform specific install file. For example;
+
+	- INSTALL.unix
+	- INSTALL.windows
+ 
+---------------------------------------------------------------
+

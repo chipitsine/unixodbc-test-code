@@ -1,0 +1,122 @@
++-------------------------------------------------------------+
+| TestFarm                                                    |
++-------------------------------------------------------------+
+
+README
+---------------------------------------------------------------
+
+OBJECTIVES:
+
+These tests, and supporting scripts and structure, have been created
+to;
+
+1. make testing an ODBC driver easier for driver developers and Q/A folks
+2. support the certification of ODBC drivers
+
+CONSTRAINTS:
+
+1. cross-platform
+2. flexible/extensible
+3. discourage introduction of software/processes which may affect test results
+4. free
+
+SOLUTION:
+
+C
+
+Most unit tests are done using C as this is the native language of the ODBC
+specification. All of the tests should be built before running the tests. 
+
+	NOTE: Tests can be built using TrollTechs qmake 
+	(see *pro files) but at	some point in the future these 
+	may be augmented by GNU auto tool build.
+
+Perl
+
+The tests are glued together by a Perl script (tst.pl). In some cases Perl 
+scripts may even be used to do the unit tests.
+
+Perl has been chosen to do this task because it is; powerful, and
+available on all platforms.
+
+Perl scripts require Config::IniFiles module from cpan. You must ensure 
+that Perl and Config::IniFiles is installed.
+
+On UNIX/Linux you can do the following as root;
+
+        # cpan -i Config::IniFiles
+
+EXECUTING:
+
+To execute the test you simply change to the base test directory and execute 
+the tst.pl script. This script will carry out tasks according to information
+found in the index.ini of each test directory. This must be done after the
+tests have been built. 
+
+ 
+CONFIGURING:
+
+The key to configuring the tests is the index.ini. Each test directory has
+one of these. This file is in the typical INI file standard. It contains a
+list of sections and each section has options. A special section, which all
+index.ini files should have is the "config" section.
+
+config
+
+The config section contains information and options for all tests it refers
+to.
+
+Example 1 - This is an example of a top-level/root index.ini which will
+run tests for an ODBC driver with Debug off and Results in the "normal" 
+format. The Results could also be generated in "xml".
+
+[config]
+Name=ODBC Tests
+Description=Test an ODBC driver with back compat. 
+Author=Peter Harvey
+Organization=MySQL
+Created=04.04.29
+Revised=
+Results=normal
+Debug=0
+
+Tests
+
+Tests (all other sections within the ini file) detail test suites or tests. 
+For example;
+
+Example 1 - the following directs processing to the "compliance" directory 
+where the index.ini in that directory will be processed.
+
+[compliance]
+Cd=compliance 
+
+Example 2 - The following executes a test. The test may be a C program or 
+some other executable - even a Perl script. The test should exit(0) upon 
+success or exit(1) if failed. The test may also direct messages to stderr
+where they will be picked up by tst.pl.
+
+[0001]
+Exec=./test
+
+
+Note: You should not have to modify tst.pl - it is meant to be generic.
+
+LICENSE:
+
+All libraries are licensed under LGPL and all programs are licensed under
+the GPL.
+
+SPONSORS:
+
+- MySQL AB
+- Easysoft Limited
+- CodeByDesign
+- unixODBC Project
+- and the community at large
+
+---------------------------------------------------------------
+Peter Harvey <peterh@mysql.com>
+04.04.29
+
+
