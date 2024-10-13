@@ -63,7 +63,7 @@ SQLRETURN TSTDisconnect(SQLHDBC connection_handle);
 SQLRETURN TSTExecDirect(SQLHSTMT statement_handle, SQLCHAR *statement_text, SQLINTEGER text_length);
 SQLRETURN TSTFetch(SQLHSTMT hstmt);
 SQLRETURN TSTNumResultCols(SQLHSTMT hstmt, SQLSMALLINT *column_count_ptr);
-SQLRETURN TSTGetData(SQLHSTMT hstmt, SQLUSMALLINT column_number, SQLSMALLINT target_type, SQLPOINTER target_value_ptr, SQLINTEGER buffer_length, SQLINTEGER *strlen_or_indptr);
+SQLRETURN TSTGetData(SQLHSTMT hstmt, SQLUSMALLINT column_number, SQLSMALLINT target_type, SQLPOINTER target_value_ptr, SQLINTEGER buffer_length, SQLLEN *strlen_or_indptr);
 
 /* catalog/info */
 SQLRETURN TSTGetTypeInfo(SQLHSTMT hstmt, SQLSMALLINT data_type);

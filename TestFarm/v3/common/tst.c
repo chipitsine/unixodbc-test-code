@@ -275,7 +275,7 @@ SQLRETURN TSTNumResultCols(SQLHSTMT hstmt, SQLSMALLINT *column_count_ptr)
     return SQL_ERROR;
 }
 
-SQLRETURN TSTGetData(SQLHSTMT hstmt, SQLUSMALLINT column_number, SQLSMALLINT target_type, SQLPOINTER target_value_ptr, SQLINTEGER buffer_length, SQLINTEGER *strlen_or_indptr)
+SQLRETURN TSTGetData(SQLHSTMT hstmt, SQLUSMALLINT column_number, SQLSMALLINT target_type, SQLPOINTER target_value_ptr, SQLINTEGER buffer_length, SQLLEN *strlen_or_indptr)
 {
     SQLRETURN ret = SQLGetData(hstmt, column_number, target_type, target_value_ptr, buffer_length, strlen_or_indptr);
 
