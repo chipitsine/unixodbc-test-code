@@ -45,7 +45,7 @@ RETCODE TSTDisconnect(HDBC hdbc);
 RETCODE TSTExecDirect(HSTMT hstmt, UCHAR FAR *szSqlStr, SDWORD cbSqlStr);
 RETCODE TSTFetch(HSTMT hstmt);
 RETCODE TSTNumResultCols(HSTMT hstmt, SWORD FAR *pccol);
-RETCODE TSTGetData(HSTMT hstmt, UWORD icol, SWORD fCType, PTR rgbValue, SDWORD cbValueMax, SDWORD FAR *pcbValue);
+RETCODE TSTGetData(HSTMT hstmt, UWORD icol, SWORD fCType, PTR rgbValue, SDWORD cbValueMax, SQLLEN *pcbValue);
 
 /* catalog/info */
 RETCODE TSTGetTypeInfo(HSTMT hstmt, SWORD fSqlType);

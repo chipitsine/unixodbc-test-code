@@ -299,7 +299,7 @@ RETCODE TSTNumResultCols(HSTMT hstmt, SWORD FAR *pccol)
   return SQL_ERROR;
 }
 
-RETCODE TSTGetData(HSTMT hstmt, UWORD icol, SWORD fCType, PTR rgbValue, SDWORD cbValueMax, SDWORD FAR *pcbValue)
+RETCODE TSTGetData(HSTMT hstmt, UWORD icol, SWORD fCType, PTR rgbValue, SDWORD cbValueMax, SQLLEN *pcbValue)
 {
   RETCODE ret = SQLGetData(hstmt, icol, fCType, rgbValue, cbValueMax, pcbValue);
 
